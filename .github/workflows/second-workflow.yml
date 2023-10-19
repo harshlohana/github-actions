@@ -1,0 +1,21 @@
+name: Second Workflow
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+        name: Checking out the code 
+      - run: echo "stage 2"
+        name: echoing stage 2
+  test: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'job 2'
+        name: echoing from job 2
+  
+  
